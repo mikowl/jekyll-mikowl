@@ -1,0 +1,301 @@
+/*****************************************************************************/
+/* Variables
+/*****************************************************************************/
+
+$sans-serif: 'Source Sans Pro', sans-serif;
+$serif: 'PT Serif', serif;
+
+$header-bg: #354652;
+
+$total-columns  : 12;
+$column-width   : 4.9em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+$base-font-size: 16px;
+
+$container-style: magic;
+
+$show-grid-backgrounds  : false;
+
+$maintext : #585858;
+$primarycolor : #344551; //blue
+$secondarycolor : #83D4AA; //seafoamy
+$tertiarycolor : #DE7568; //muted red
+$quaternarycolor : #DEDC96; //lelllow
+
+$header-height : 253px;
+
+/*****************************************************************************/
+/* Common
+/*****************************************************************************/
+
+body {
+  font-family: $sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.4;
+  color: $maintext;
+  background: $primarycolor url(../images/noise.png) repeat;
+  text-rendering:optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/*****************************************************************************/
+/* Typography
+/*****************************************************************************/
+
+a {
+  color: $tertiarycolor;
+  @include transition(all 0.3s ease-in-out);
+}
+p {
+  margin:1em 0;
+}
+
+strong {
+  background: lighten($quaternarycolor, 10);
+  color:#000;
+  padding:0 7px;
+  @include border-radius(4px);
+}
+
+h1, h2, h3, h4 {
+  font-family: $sans-serif;
+  font-weight: 700;
+}
+
+ul {
+  margin:1em 0;
+  li {
+    list-style-type: disc;
+    margin-bottom:0.5em;
+  }
+}
+h1 {
+  font-size:2.7em;
+  margin:0.5em 0;
+  line-height: 1em;
+  color: lighten($primarycolor, 10);
+  border-bottom:1px dashed #BABABA;
+  padding-bottom:0.4em;
+  margin-bottom:0.5em;
+}
+
+h2 {
+  font-size:2em;
+  line-height:1.25em;
+  margin:0.5em 0;
+  font-weight: 700;
+    a {
+      color:lighten($primarycolor, 15);
+      text-decoration: none;
+
+      @include transition(all 300ms ease-in);
+      &:hover {
+
+        color:lighten($primarycolor, 25);
+        border-bottom: 3px solid $secondarycolor;
+      }
+    }
+}
+
+h3 {
+  font-size:1.6em;
+  color:darken($tertiarycolor, 5);
+  font-weight: 700;
+  margin:0.75em 0;
+
+  @include border-radius(3px);
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      &:hover {
+        color:lighten($tertiarycolor, 5);
+      }
+    }
+}
+
+blockquote {
+  font-style: italic;
+  position: relative;
+  font-size:1.1em;
+  line-height: 1.5em;
+  padding-left: 1em;
+  border-left: 4px solid $quaternarycolor;
+}
+.date {
+  color: #DE7568;
+  font-family: $sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+article {
+  font-family: 'PT Serif', serif;
+  line-height: 1.6em;
+  font-weight: 300;
+  border-bottom:1px dashed #7FCDA5;
+  padding-bottom:0.75em;
+  margin-bottom:2em;
+
+  img {
+    max-width: 100%;
+    display:block;
+    margin:0 auto 0.65em auto;
+    @include border-radius(4px);
+  }
+}
+
+/*****************************************************************************/
+/* Home
+/*****************************************************************************/
+
+
+ul.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+}
+
+ul.posts li {
+  line-height: 1.75em;
+}
+
+ul.posts span {
+  color: #aaa;
+}
+
+
+/*****************************************************************************/
+/* Layout
+/*****************************************************************************/
+
+$break: 12;
+
+.container {
+  position:relative;
+  @include container($total-columns, $break);
+  @include susy-grid-background;
+}
+
+.content {
+  z-index: 8000;
+  position:relative;
+  background: #FFF url(../images/noise.png);
+  margin-top: $header-height;
+  padding-top:25px;
+  @include transition(all 300ms ease-in-out);
+}
+
+
+@include at-breakpoint(50em) {
+
+  .main-content {
+    @include span-columns(8, $break, 1em);
+  }
+  .side-bar {
+    @include span-columns(4 omega, $break, 1em);
+  }
+
+}
+
+@include at-breakpoint(60em) {
+  body .main-content {
+    font-size:1.25em;
+  }
+}
+/*****************************************************************************/
+/* Posts
+/*****************************************************************************/
+
+/* Code Blocks */
+
+.highlight {
+  overflow-x: auto;
+  width:100%;
+  @include border-radius(4px);
+}
+
+pre, code {
+  font-family: 'Source Code Pro', sans-serif;
+}
+
+pre {
+  font-size: .7em;
+  line-height: 1.4em;
+  font-weight: 400;
+  padding: 1em;
+}
+
+code {
+  padding: 0 .2em;
+}
+
+p code, li code {
+  display: inline-block;
+  white-space: no-wrap;
+  background: #fff;
+  font-size: .75em;
+  line-height: 1.5em;
+  color: #555;
+  border: 1px solid lighten($primarycolor, 55);
+  @include border-radius(3px);
+  padding: 0 .3em;
+  margin: -1px 0;
+}
+pre code {
+  border: none;
+}
+
+
+/*Pagination */
+
+.pagination {
+  text-align: center;
+  position:relative;
+  margin-bottom:1em;
+  padding:0.5em;
+
+  .next {
+    position:absolute;
+    right:0;
+  }
+  .prev {
+    position:absolute;
+    left:0;
+  }
+  .disabled {display:none;}
+}
+
+/* Terminal */
+
+pre.terminal {
+  border: 1px solid #000;
+  background-color: #333;
+  color: #FFF;
+}
+
+pre.terminal code {
+  background-color: #333;
+}
+
+/*****************************************************************************/
+/* Footer
+/*****************************************************************************/
+
+footer {
+  color: #FFF;
+}
+
+.smedia {
+  font-size:1.3em;
+  margin-top:14px;
+  a {
+    color:#FFF;
+    margin:0 0.2em;
+  }
+}

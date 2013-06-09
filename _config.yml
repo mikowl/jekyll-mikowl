@@ -1,0 +1,7 @@
+name: Mikowl
+destination: _site
+markdown: rdiscount
+pygments: true
+permalink: /:year/:title/
+paginate: 3
+exclude: [codekit-config.json, config.rb]

@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'mikowl';
+  src:url('../fonts/mikowl.eot');
+  src:url('../fonts/mikowl.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/mikowl.woff') format('woff'),
+    url('../fonts/mikowl.ttf') format('truetype'),
+    url('../fonts/mikowl.svg#mikowl') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'mikowl';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="ico-"] {
+*/
+.ico-home, .ico-books, .ico-pushpin, .ico-download, .ico-link, .ico-twitter, .ico-github, .ico-facebook, .ico-heart, .ico-check-alt, .ico-forrst, .ico-user, .ico-navicon, .ico-mikowltxt, .ico-instagram-icon, .ico-bubbles, .ico-mailicon, .ico-file, .ico-file-2 {
+  font-family: 'mikowl';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.ico-home:before {
+  content: "\e000";
+}
+.ico-books:before {
+  content: "\e001";
+}
+.ico-pushpin:before {
+  content: "\e002";
+}
+.ico-download:before {
+  content: "\e003";
+}
+.ico-link:before {
+  content: "\e004";
+}
+.ico-twitter:before {
+  content: "\e005";
+}
+.ico-github:before {
+  content: "\e006";
+}
+.ico-facebook:before {
+  content: "\e007";
+}
+.ico-heart:before {
+  content: "\e008";
+}
+.ico-check-alt:before {
+  content: "\e009";
+}
+.ico-forrst:before {
+  content: "\e00a";
+}
+.ico-user:before {
+  content: "\e00b";
+}
+.ico-navicon:before {
+  content: "\e00c";
+}
+.ico-mikowltxt:before {
+  content: "\e00d";
+}
+.ico-instagram-icon:before {
+  content: "\e00e";
+}
+.ico-bubbles:before {
+  content: "\e00f";
+}
+.ico-mailicon:before {
+  content: "\e010";
+}
+.ico-file:before {
+  content: "\e012";
+}
+.ico-file-2:before {
+  content: "\e011";
+}

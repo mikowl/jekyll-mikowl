@@ -1,0 +1,87 @@
+.side-bar {
+  section {
+    margin-bottom:1.25em;
+  }
+  h2, h3, h4 {
+    display:block;
+    color:#FFF;
+    font-weight:400;
+    margin:0.4em 0;
+    padding:5px 10px 5px 10px;
+    @include border-radius(3px);
+      a {
+        color: #FFF;
+        text-decoration: none;
+    }
+  }
+
+  h3 {
+  font-size:1.3em;
+  background: $secondarycolor;
+  }
+
+  h4 {
+    font-size: 1.2em;
+    background: $tertiarycolor;
+  }
+
+  li {
+    list-style-type: none;
+    @include transition(all 300ms ease-in-out);
+    @include border-radius(0 4px 4px 0);
+    &:hover{
+      background:lighten($quaternarycolor, 16);
+    }
+  }
+}
+
+.about {
+  @include clearfix;
+
+  h3{
+    background:lighten($primarycolor, 10);
+  }
+  .insta {
+    float:left;
+    font-size: 1.2em;
+    color: $primarycolor;
+    margin:0.15em 0 0 1em;
+    text-decoration: none;
+    &:hover {
+      color:lighten($primarycolor, 20);
+    }
+  }
+}
+figure.about {
+  width:95px;
+  margin:5px 0 0 5px;
+  @include border-radius(50%);
+  border:4px solid $tertiarycolor;
+  float:right;
+  img {
+    display: block;
+    @include border-radius(50%);
+  }
+}
+
+.github span, .pinboards span, .recent-posts span {
+  margin-right:0.15em;
+}
+
+.recent-posts span {
+  color: lighten($maintext, 20);
+  vertical-align: middle;
+}
+
+.pin-item span {
+  font-size:0.799em;
+  color: lighten($maintext, 10);
+}
+
+span.pin-description {
+  font-size:0.9em;
+}
+.twitter-follow-button {
+  margin:0.25em 0 0.5em 0;
+  float:left;
+}
