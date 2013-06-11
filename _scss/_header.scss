@@ -1,14 +1,13 @@
-
+/*****************************************************************************/
+/* Site Header
+/*****************************************************************************/
 
 .page-header {
   background: $header-bg url(../images/noise.png) repeat;
-  position:fixed;
-  top:0;
   width:100%;
-  z-index:1;
+  height:243px;
   border-top:5px solid $tertiarycolor;
   @include transition(z-index 300ms ease-in-out, background 300ms ease-in-out, min-height 300ms ease-in-out, height 300ms ease-in-out);
-
 }
 
 .page-header:hover {
@@ -39,7 +38,7 @@ a.brand {
 }
 .brand {
   display:block;
-  padding: 0.5em 0 0.3em 0;
+  padding: 0.75em 0 0.3em 0;
   text-decoration: none;
   h1 {
     font-size:1.6em;
@@ -53,12 +52,13 @@ a.brand {
   }
 }
 
-.hdr-fixed {
-  .page-header {
-    z-index: 9999;
-    height:60px;
-  }
-
+.hdr-fixed.active {
+  position:fixed;
+  top:0;
+  height:60px;
+  width:100%;
+  background: $header-bg url(../images/noise.png) repeat;
+  z-index: 9999;
   .brand .logo {
     width:80px;
     height:80px;
@@ -78,7 +78,7 @@ a.brand {
 
 a.navicon {
   position:absolute;
-  right:15px;
+  right:44px;
   top:10px;
   display: block;
   text-decoration: none;

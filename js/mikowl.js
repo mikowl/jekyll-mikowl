@@ -3,8 +3,8 @@
   // Fixed header
   $(window).load(function(){
     $('.content').waypoint(function(down) {
-      $('body').toggleClass('hdr-fixed');
-    }, { offset: 120 });
+      $('.hdr-fixed').toggleClass('active');
+    }, { offset: 60 });
   });
 
   // Navigation
