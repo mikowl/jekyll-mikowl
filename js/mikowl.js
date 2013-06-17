@@ -1,3 +1,5 @@
+---
+---
 (function($){
 
   // Fixed header
@@ -19,14 +21,10 @@
     return false;
   });
 
-  // Github feed
+  // Try to chill out email spam https://gist.github.com/mathiasbynens/286824
 
-  github.showRepos({
-      user: 'mikowl',
-      count: 5,
-      skip_forks: true,
-      target: '.github ul'
+  $('a[href^="mailto:"]').each(function() {
+    this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
   });
-
 
 })(jQuery);

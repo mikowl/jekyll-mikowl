@@ -1,3 +1,5 @@
+---
+---
 /*
 jQuery Waypoints - v2.0.2
 Copyright (c) 2011-2013 Caleb Troughton
@@ -15,7 +17,7 @@ var github = (function(){
     var i = 0, fragment = '', t = $(target)[0];
 
     for(i = 0; i < repos.length; i++) {
-      fragment += '<li><a href="'+repos[i].html_url+'">'+repos[i].name+'</a><br>'+escapeHtml(repos[i].description||'')+'</li>';
+      fragment += '<li><a href="'+repos[i].html_url+'">'+repos[i].name+'</a><span>'+escapeHtml(repos[i].description||'')+'</span></li>';
     }
     t.innerHTML = fragment;
   }
@@ -35,7 +37,6 @@ var github = (function(){
           if (options.count) { repos.splice(options.count); }
           render(options.target, repos);
         }
-
       });
     }
   };

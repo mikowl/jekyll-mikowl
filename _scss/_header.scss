@@ -5,72 +5,51 @@
 .page-header {
   background: $header-bg url(../images/noise.png) repeat;
   width:100%;
-  height:243px;
   border-top:5px solid $tertiarycolor;
   @include transition(z-index 300ms ease-in-out, background 300ms ease-in-out, min-height 300ms ease-in-out, height 300ms ease-in-out);
+    &:hover {
+      background: darken($header-bg, 3) url(../images/noise.png) repeat;
+    }
 }
 
-.page-header:hover {
-  background: darken($header-bg, 3) url(../images/noise.png) repeat;
-}
+a.brand {color:transparent;}
 
-.brand .logo {
-  background:transparent url(../img/grunt-logo.png) no-repeat;
-  background-image:-webkit-linear-gradient(transparent,transparent),url(../images/mikowl.svg);
-  background-image:-moz-linear-gradient(transparent,transparent),url(../images/mikowl.svg);
-  background-image:linear-gradient(transparent,transparent),url(../images/mikowl.svg);
-  background-size:100% auto;
-  margin:0 auto;
-  padding: 1.25em 0 0 0;
-  position:relative;
-  display:block;
-  width:170px;
-  height:170px;
-  @include opacity(0.95);
-  @include transition(all 0.3s ease-in-out);
-  &:hover {
-    @include opacity(1);
-  }
-}
-
-a.brand {
-  color:transparent;
-}
 .brand {
   display:block;
-  padding: 0.75em 0 0.3em 0;
+  padding: 1em 0 0.3em 0;
   text-decoration: none;
+
   h1 {
     font-size:1.6em;
     color: $secondarycolor;
     border-bottom:none;
     padding:0;
-    margin:0;
+    margin:0.4em 0 0 0;
     line-height: 1em;
     height:40px;
     text-align: center;
   }
-}
 
-.hdr-fixed.active {
-  position:fixed;
-  top:0;
-  height:60px;
-  width:100%;
-  background: $header-bg url(../images/noise.png) repeat;
-  z-index: 9999;
-  .brand .logo {
-    width:80px;
-    height:80px;
-    background-color: $primarycolor;
-    border:5px solid $primarycolor;
-    padding:0;
-    @include opacity(1);
-    @include border-radius(50%);
-
+  .logo {
+    background:transparent url(../images/mikowl.png) no-repeat;
+    background-image:-webkit-linear-gradient(transparent,transparent),url(../images/mikowl.svg);
+    background-image:-moz-linear-gradient(transparent,transparent),url(../images/mikowl.svg);
+    background-image:linear-gradient(transparent,transparent),url(../images/mikowl.svg);
+    background-size:100% auto;
+    margin:0 auto;
+    padding: 0;
+    position:relative;
+    display:block;
+    width:150px;
+    height:150px;
+    @include opacity(0.95);
+    @include transition(all 0.3s ease-in-out);
+      &:hover {
+        @include opacity(1);
+      }
   }
-  .brand h1 {display:none;}
 }
+
 
 /*****************************************************************************/
 /* Navigation
@@ -78,7 +57,7 @@ a.brand {
 
 a.navicon {
   position:absolute;
-  right:44px;
+  right:17px;
   top:10px;
   display: block;
   text-decoration: none;
@@ -93,7 +72,7 @@ a.navicon {
     position:absolute;
     width:51px;
     top:52px;
-    right:15px;
+    right:17px;
     background:darken($primarycolor, 7);
     @include transition(all 300ms ease-in-out);
     ul {
@@ -124,6 +103,9 @@ a.navicon {
   .twitter {
     font-size: 1.2em;
   }
+  .contact {
+    font-size:0.9em;
+  }
 }
 
 .js #menu {
@@ -133,4 +115,28 @@ a.navicon {
 
 #menu.active {
   max-height: 20em;
+}
+
+@include at-breakpoint(50em) {
+  #menu, a.navicon {
+    right:44px;
+  }
+  .hdr-fixed.active {
+    position:fixed;
+    top:0;
+    height:60px;
+    width:100%;
+    background: $header-bg url(../images/noise.png) repeat;
+    z-index: 9999;
+      .brand .logo {
+        width:80px;
+        height:80px;
+        background-color: $primarycolor;
+        border:5px solid $primarycolor;
+        padding:0;
+        @include opacity(1);
+        @include border-radius(50%);
+      }
+  .brand h1 {display:none;}
+  }
 }

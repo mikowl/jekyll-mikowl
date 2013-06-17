@@ -1,0 +1,29 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Mikowl | Web Design & Development</title>
+ <link href="http://mikowl.com/feed.xml" rel="self"/>
+ <link href="http://mikowl.com/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://mikowl.com/</id>
+ <author>
+   <name>Michael Elias</name>
+   <email>michael@mikowl.com</email>
+ </author>
+
+ {% for post in site.posts %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://mikowl.com{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://mikowl.com{{ post.id }}</id>
+   {% if post.meta %}
+    <content type="html">{{ post.meta }}</content>
+    {% endif %}
+ </entry>
+ {% endfor %}
+
+</feed>

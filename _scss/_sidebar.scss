@@ -65,10 +65,19 @@ figure.about {
   }
 }
 
-.github span, .pinboards span, .recent-posts span {
+.pinboards span, .recent-posts span {
   margin-right:0.15em;
 }
 
+.gh_repos {
+  a {display:block;}
+  span {
+    margin-right:0.15em;
+  }
+  li {
+    margin-bottom:0.45em;
+  }
+}
 .recent-posts span {
   color: lighten($maintext, 20);
   vertical-align: middle;
