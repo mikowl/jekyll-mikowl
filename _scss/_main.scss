@@ -324,14 +324,18 @@ pre.terminal code {
 footer {
   color: #FFF;
   font-weight:300;
+  padding-bottom:1em;
 }
 
 .smedia {
-  font-size:1.3em;
+  font-size:1.5em;
   margin-top:14px;
   a {
     color:#FFF;
     margin:0 0.4em;
     text-decoration: none;
+    &:hover {
+      color: $tertiarycolor;
+    }
   }
 }

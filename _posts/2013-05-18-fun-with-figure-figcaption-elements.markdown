@@ -41,7 +41,7 @@ And here's a snippet on how to get a caption that sits over the bottom of the ph
 
 {% highlight html %}
 <figure>
-  <img src="images/yourimage.jpg" alt="Image description">
+  <img src="/images/yourimage.jpg" alt="Image description">
   <figcaption>This is a caption</figcaption>
 </figure>
 {% endhighlight %}
