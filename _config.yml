@@ -1,7 +1,9 @@
 name: Mikowl
 destination: _site
 markdown: rdiscount
+domain: mikowl.com
 pygments: true
 permalink: /:year/:title/
 paginate: 3
+author: Michael Elias
 exclude: [config.rb, Rakefile]

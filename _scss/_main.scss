@@ -23,7 +23,6 @@ $secondarycolor : #83D4AA; //seafoamy
 $tertiarycolor : #DE7568; //muted red
 $quaternarycolor : #DEDC96; //lelllow
 
-$header-height : 253px;
 
 /*****************************************************************************/
 /* Common
@@ -85,7 +84,7 @@ ol {
   }
 }
 h1 {
-  font-size:2.5em;
+  font-size:2.4em;
   margin:0.5em 0;
   line-height: 1em;
   color: lighten($primarycolor, 10);
@@ -146,6 +145,7 @@ blockquote {
 }
 
 article {
+  position: relative;
   font-family: 'PT Serif', serif;
   font-size:1.04em;
   line-height: 1.6em;
@@ -163,6 +163,13 @@ article {
     @include border-radius(4px);
   }
 }
+
+.share {
+  margin-top:2em;
+}
+
+
+.g-plusone {margin-top:-.25em;}
 
 /*****************************************************************************/
 /* Layout

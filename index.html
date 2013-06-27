@@ -4,6 +4,11 @@ page-class: home
 ---
 
 {% for post in paginator.posts %}
+{% if post.style %}
+ <style type="text/css">
+     {{ post.style }}
+ </style>
+{% endif %}
   <article>
     <span class="date">{{ post.date | date_to_string }}</span>
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>

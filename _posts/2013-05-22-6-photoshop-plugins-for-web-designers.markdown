@@ -12,19 +12,19 @@ I know a lot of folks are moving away from designing sites in photoshop and goin
 Lately I've been using a handful of plugins that improve my web design workflow. Here are a few worth checking out:
 
 ###[CSS3Ps](http://css3ps.com)
-<a href="http://css3ps.com"><img src="images/css3ps.jpg" alt="CSS3PS"></a>
+<a href="http://css3ps.com"><img src="/images/css3ps.jpg" alt="CSS3PS"></a>
 CSS3Ps is a handy tool that converts your layer styles into CSS3. It works really well for quickly grabbing gradients, borders, box shadows, etc. It doesn't always turn out perfect, but gives you a nice starting point.  And for [Sass](http://sass-lang.com "Sass") users, it can spit that out as well.
 
 ### [Engima64](http://getenigma64.com)
-<a href="http://getenigma64.com"><img src="images/enigma64.jpg" alt="Enigma 64"></a>
+<a href="http://getenigma64.com"><img src="/images/enigma64.jpg" alt="Enigma 64"></a>
 Enigma64 exports your photoshop layers to losslessly optimized images but even cooler is it's ability to export and encode your images to Base64.  $20 ain't too shabby for the amount of time it can save.
 
 ### [Web zap](http://webzap.uiparade.com)
-<a href="http://webzap.uiparade.com"><img src="images/webzap.jpg" alt="Web zap"></a>
+<a href="http://webzap.uiparade.com"><img src="/images/webzap.jpg" alt="Web zap"></a>
 Web zap aids in creating website mock-ups by giving you the ability to generate common interface elements with the click of a button.  It generates lorem ipsum text and common layout patterns with ease. It also has a nice preview feature that will take your design and put it in an iPad/iPhone, etc.
 
 ### [FontShop Plugin](http://www.fontshop.com/plugin)
-<a href="http://www.fontshop.com/plugin"><img src="images/fontshop.jpg" alt="FontShop"></a>
+<a href="http://www.fontshop.com/plugin"><img src="/images/fontshop.jpg" alt="FontShop"></a>
 The FontShop plug-in gives you the ability to test out and preview a massive amount of fonts in your mock-up. It can be extremely useful if you use [TypeKit](http://typekit.com "TypeKit") as a lot of the fonts in TypeKit are in FontShop as well.
 
 ### [Corner Editor](http://photoshopscripts.wordpress.com/2013/02/03/corner-editor-photoshop-script/)
