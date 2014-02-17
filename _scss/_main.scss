@@ -2,8 +2,10 @@
 /* Variables
 /*****************************************************************************/
 
-$sans-serif: 'Source Sans Pro', sans-serif;
+//$sans-serif: 'Source Sans Pro', sans-serif;
 $serif: 'PT Serif', serif;
+
+$sans-serif:  'Lato', sans-serif; // 300, 400, 700
 
 $header-bg: #354652;
 
@@ -11,13 +13,13 @@ $total-columns  : 12;
 $column-width   : 4.4em;
 $gutter-width   : 1.75em;
 $grid-padding   : $gutter-width;
-$base-font-size: 16px;
+
 
 $container-style: magic;
 
 $show-grid-backgrounds  : false;
 
-$maintext : #585858;
+$maintext : #444444;
 $primarycolor : #344551; //blue
 $secondarycolor : #83D4AA; //seafoamy
 $tertiarycolor : #DE7568; //muted red
@@ -28,14 +30,27 @@ $quaternarycolor : #DEDC96; //lelllow
 /* Common
 /*****************************************************************************/
 
+
+@include at-breakpoint(30em) {
+  html {
+    background: url(../images/treebg.jpg) no-repeat center center fixed;
+    @include background-size(cover);
+  }
+}
+
 body {
   font-family: $sans-serif;
   font-weight: 400;
   font-size: 1em;
   line-height: 1.4;
   color: $maintext;
-  background: $primarycolor url(../images/noise.png) repeat;
-  text-rendering :optimizeLegibility;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-rendering: optimizeLegibility;
+  @include transition(background-color 1s ease-in-out);
+
+  &.lighten {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
 }
 
 img {
@@ -95,21 +110,26 @@ h1 {
 }
 
 h2 {
-  font-size:2em;
+  font-size: 1.5em;
   line-height:1.25em;
-  margin:0.5em 0;
+  margin:0 0 0.5em 0;
   font-weight: 700;
-    a {
-      color:lighten($primarycolor, 15);
-      text-decoration: none;
 
-      @include transition(all 300ms ease-in);
-      &:hover {
+  a {
+    color:lighten($primarycolor, 15);
+    text-decoration: none;
 
-        color:lighten($primarycolor, 25);
-        border-bottom: 3px solid $secondarycolor;
-      }
+    @include transition(all 300ms ease-in);
+    &:hover {
+
+      color:lighten($primarycolor, 25);
+      border-bottom: 3px solid $secondarycolor;
     }
+  }
+
+  @include at-breakpoint(30em) {
+    font-size:2.3em;
+  }
 }
 
 h3 {
@@ -117,16 +137,15 @@ h3 {
   color:darken($tertiarycolor, 5);
   font-weight: 700;
   margin:0.75em 0;
-
   @include border-radius(3px);
 
-    a {
-      color: inherit;
-      text-decoration: underline;
-      &:hover {
-        color:lighten($tertiarycolor, 5);
-      }
+  a {
+    color: inherit;
+    text-decoration: underline;
+    &:hover {
+      color:lighten($tertiarycolor, 5);
     }
+  }
 }
 
 blockquote {
@@ -146,11 +165,13 @@ blockquote {
 }
 
 article {
+  font-family: $serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   position: relative;
-  font-family: 'PT Serif', serif;
-  font-size:1.04em;
-  line-height: 1.6em;
   font-weight: 300;
+  font-size:1.0625em;
+  line-height: 1.7em;
   border-bottom:1px dashed #7FCDA5;
   padding-bottom:0.75em;
   margin-bottom:2em;
@@ -169,14 +190,13 @@ article {
   margin-top:2em;
 }
 
-
 .g-plusone {margin-top:-.25em;}
 
 /*****************************************************************************/
 /* Layout
 /*****************************************************************************/
 
-$break: 12;
+$break: 8;
 
 .container {
   position:relative;
@@ -186,16 +206,13 @@ $break: 12;
 
 .content {
   position:relative;
-  background: #FFF url(../images/noise.png);
-  padding-top:25px;
   @include transition(all 300ms ease-in-out);
 }
 
-
-@include at-breakpoint(50em) {
-  $gutter-width   : 2.25em;
+@include at-breakpoint(50em) { // 800px
+  $gutter-width   : 29em;
   .main-content {
-    @include span-columns(8, $break, 1em);
+    @include span-columns($break,$break, 1em);
     font-size:1.1em;
   }
   .side-bar {
@@ -204,7 +221,7 @@ $break: 12;
 
 }
 
-@include at-breakpoint(65em) {
+@include at-breakpoint(65em) { // 1040px
   .main-content {
     font-size:1.25em;
   }
@@ -252,19 +269,22 @@ pre {
 
 code {
   padding: 0 .2em;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
 }
 
 p code, li code {
+  color: #354652;
+  font-weight: 400;
   display: inline-block;
   white-space: no-wrap;
   background: #fff;
   font-size: .75em;
   line-height: 1.5em;
-  color: #555;
   border: 1px solid lighten($primarycolor, 55);
   @include border-radius(3px);
   padding: 0 .3em;
-  margin: -1px 0;
+  margin: 0 2px;
 }
 pre code {
   border: none;
@@ -311,11 +331,14 @@ pre.terminal code {
     background: $secondarycolor;
     color:#FFF;
     text-align: center;
-    float:left;
     margin-right:1em;
+    margin-top: 7px;
     padding: 5px 20px;
     @include border-radius(4px);
     font-family: $sans-serif;
+  }
+  h3 {
+    display:block;
   }
   h3 a {
     color:lighten($primarycolor, 20);
@@ -330,20 +353,25 @@ pre.terminal code {
 /*****************************************************************************/
 
 footer {
-  color: #FFF;
+  background: #2C3644 url(../images/noise.png) repeat;;
   font-weight:300;
+  color: #A0AEB2;
   padding-bottom:1em;
 }
 
 .smedia {
-  font-size:1.5em;
+  font-size:1.625em;
   margin-top:14px;
   a {
-    color:#FFF;
+    color: $quaternarycolor;
     margin:0 0.4em;
     text-decoration: none;
     &:hover {
-      color: $tertiarycolor;
+      color: darken($quaternarycolor, 10);
     }
+  }
+
+  .twitter-ico {
+    font-size: 1.05em;
   }
 }

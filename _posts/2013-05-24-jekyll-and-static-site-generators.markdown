@@ -20,4 +20,6 @@ At [work](http://tmdcreative.com "TMD") I maintain and develop a number of sites
 -  I'm trying to get into the groove of using version control in my projects, this was a great opportunity to utilize a more modern workflow using [Git](http://git-scm.com/ "Git") and [GitHub](http://github.com "GitHub"). When I'm finished writing a post I run `jekyll serve`, check the site locally then push & deploy.
 - It's fun and all the [cool](http://www.paulirish.com/) [kids](http://daverupert.com/) are doing it.
 
+So here it is, you can take a look at the source [here](https://github.com/mikowl/jekyll-mikowl "Mikowl's Jekyll Site") on github if you'd like. 
+
 

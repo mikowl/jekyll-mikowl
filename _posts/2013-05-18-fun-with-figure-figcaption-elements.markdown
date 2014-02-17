@@ -14,7 +14,9 @@ style: |
     position:absolute;
     bottom:0;
     left:0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+       -moz-box-sizing: border-box; 
+            box-sizing: border-box;
     width:100%;
     padding:0.875em;
     color:#FFF;
@@ -49,11 +51,9 @@ And here's a snippet on how to get a caption that sits over the bottom of the ph
 ###The CSS:
  {% highlight css %}
  /* Relatively position the figure so we can absolutely position 
- the caption over the photo */
+    the caption over the photo */
 figure {
-  position:relative;
-  /* Keep it flexy bro - give the image a max width so the 
-  caption background will span the width of the image. */
+  position: relative;
   max-width: 400px;
 }
 
@@ -61,9 +61,11 @@ figcaption {
   position: absolute;
   bottom: 0;
   left: 0;
-  box-sizing: border-box;
-  width:100%;
-  padding:0.875em;
+  -webkit-box-sizing: border-box; 
+     -moz-box-sizing: border-box; 
+          box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
   color: #FFF;
   background: #000000; /* Fallback color */
   background: rgba(0, 0, 0, .6);

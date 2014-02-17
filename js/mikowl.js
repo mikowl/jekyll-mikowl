@@ -3,15 +3,29 @@
 (function($){
 
   // Fixed header
-  $(window).load(function(){
-    $('.content').waypoint(function(down) {
-      $('.hdr-fixed').toggleClass('active');
-    }, { offset: 60 });
-  });
+  // $(window).load(function(){
+  //   $('.content').waypoint(function(down) {
+  //     $('.hdr-fixed').toggleClass('active');
+  //   }, { offset: 60 });
+  // });
 
   // Navigation
 
   $('body').addClass('js');
+
+  $(window).scroll(function(){
+    var fromTopPx = 75,
+        scrolledFromtop = $(window).scrollTop(),
+        scrollopacity = $(window).scrollTop()/2,
+        $body = $('body');
+
+    if(scrolledFromtop > fromTopPx) {
+      $body.addClass('lighten');
+    }
+    else {
+      $body.removeClass('lighten');
+    }
+  });
 
   var $menu = $('#menu'), $menulink = $('.navicon');
 

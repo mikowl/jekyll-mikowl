@@ -7,7 +7,7 @@ image: "6photoshop.jpg"
 tags: photoshop, design
 ---
 
-I know a lot of folks are moving away from designing sites in photoshop and going straight to designing in the browser. I'm not that cool and still like designing in photoshop (I know I'm not the [only one](http://www.sazzy.co.uk/2012/02/why-i-cant-design-in-the-browser/)).  I don't spend as much time getting things "pixel perfect" in a 960 grid as I did in the past, however, I like to design interfaces, color schemes, buttons, and come up with the overall look and feel of a site before moving to the browser.
+I know a lot of folks are moving away from designing sites in photoshop and going straight to designing in the browser. I still like designing and coming up with rough comps in photoshop.  I don't spend as much time getting things "pixel perfect" in a 960 grid as I did in the past, however, I like to design interfaces, color schemes, buttons, and come up with the overall look and feel of a site before moving to the browser.
 
 Lately I've been using a handful of plugins that improve my web design workflow. Here are a few worth checking out:
 

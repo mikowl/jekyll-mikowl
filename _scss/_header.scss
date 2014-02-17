@@ -3,14 +3,11 @@
 /*****************************************************************************/
 
 .page-header {
-  background: $header-bg url(../images/noise.png) repeat;
+  background: url(../images/noise.png) repeat;
   width:100%;
   height:220px;
   border-top:5px solid $tertiarycolor;
   @include transition(z-index 300ms ease-in-out, background 300ms ease-in-out, min-height 300ms ease-in-out, height 300ms ease-in-out);
-    &:hover {
-      background: darken($header-bg, 3) url(../images/noise.png) repeat;
-    }
 }
 
 a.brand {color:transparent;}
@@ -18,8 +15,13 @@ a.brand {color:transparent;}
 .brand {
   display:block;
   padding: 1em 0 0.3em 0;
-  text-decoration: none;
-
+  a {
+    text-decoration: none;
+    display:block;
+    width:150px;
+    height:150px;
+    margin: 0 auto;
+  }
   h1 {
     font-size:1.6em;
     color: $secondarycolor;
@@ -37,7 +39,6 @@ a.brand {color:transparent;}
     background-image:-moz-linear-gradient(transparent,transparent),url(../images/mikowl.svg);
     background-image:linear-gradient(transparent,transparent),url(../images/mikowl.svg);
     background-size:100% auto;
-    margin:0 auto;
     padding: 0;
     position:relative;
     display:block;
@@ -65,8 +66,7 @@ a.navicon {
   line-height: 0.5em;
   padding: 8px;
   font-size: 1.6em;
-  color: $secondarycolor;
-  background:darken($primarycolor, 7);
+  color: darken($secondarycolor, 10%);
 }
 
 #menu {
@@ -74,7 +74,7 @@ a.navicon {
   width:51px;
   top:52px;
   right:17px;
-  background:darken($primarycolor, 7);
+
   @include transition(all 300ms ease-in-out);
   ul {
     margin: 0;
@@ -91,10 +91,10 @@ a.navicon {
     }
     a {
       @include transition(all 300ms ease-in-out);
-      color:lighten($quaternarycolor, 8);
+      color: lighten($primarycolor, 10%);
       text-decoration: none;
       &:hover{
-        color:lighten($quaternarycolor, 20);
+        color:lighten($primarycolor, 20%);
       }
     }
   }
@@ -127,16 +127,13 @@ a.navicon {
     top:0;
     height:60px;
     width:100%;
-    background: $header-bg url(../images/noise.png) repeat;
     z-index: 9999;
       .brand .logo {
         width:80px;
         height:80px;
-        background-color: $primarycolor;
-        border:5px solid $primarycolor;
         padding:0;
         @include opacity(1);
-        @include border-radius(50%);
+
       }
   .brand h1 {display:none;}
   }

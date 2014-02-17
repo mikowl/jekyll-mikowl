@@ -7,9 +7,7 @@
         <meta name="description" content="Front end web design and development blog">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="alternate" type="application/atom+xml" href="atom.xml">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Source+Code+Pro:300|PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300|PT+Serif:400,400italic|Lato:300,400,700' rel='stylesheet' type='text/css'>
         <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
         <link rel="shortcut icon" href="/icon.png">
         <link rel="apple-touch-icon-precomposed" href="/icon.png">
@@ -28,9 +26,9 @@
               <div class="main-content">
                 {{ content }}
               </div>
-              <div class="side-bar">
+             <!--  <div class="side-bar">
                 {% include sidebar.html %}
-              </div>
+              </div> -->
             </div>
         </section>
 
@@ -39,22 +37,6 @@
         <script src="/js/plugins.js"></script>
         <script src="/js/mikowl.js"></script>
         <script>
-        $(document).ready(function(){
-          if (!window.jXHR){
-              var jxhr = document.createElement('script');
-              jxhr.type = 'text/javascript';
-              jxhr.src = '/js/jXHR.js';
-              var s = document.getElementsByTagName('script')[0];
-              s.parentNode.insertBefore(jxhr, s);
-          }
-          github.showRepos({
-              user: 'mikowl',
-              count: 4,
-              skip_forks: true,
-              target: '.gh_repos'
-          });
-        });
-
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
