@@ -35,7 +35,7 @@ body {
   line-height: 1.4;
   color: $maintext;
   background: $primarycolor url(../images/noise.png) repeat;
-  text-rendering:optimizeLegibility;
+  text-rendering :optimizeLegibility;
 }
 
 img {
@@ -51,6 +51,7 @@ a {
   color: $tertiarycolor;
   @include transition(all 0.3s ease-in-out);
 }
+
 p {
   margin:1em 0;
 }

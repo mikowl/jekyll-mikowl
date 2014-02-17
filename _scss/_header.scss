@@ -5,6 +5,7 @@
 .page-header {
   background: $header-bg url(../images/noise.png) repeat;
   width:100%;
+  height:220px;
   border-top:5px solid $tertiarycolor;
   @include transition(z-index 300ms ease-in-out, background 300ms ease-in-out, min-height 300ms ease-in-out, height 300ms ease-in-out);
     &:hover {
@@ -69,33 +70,33 @@ a.navicon {
 }
 
 #menu {
-    position:absolute;
-    width:51px;
-    top:52px;
-    right:17px;
-    background:darken($primarycolor, 7);
-    @include transition(all 300ms ease-in-out);
-    ul {
-      margin: 0;
-      padding: 8px;
+  position:absolute;
+  width:51px;
+  top:52px;
+  right:17px;
+  background:darken($primarycolor, 7);
+  @include transition(all 300ms ease-in-out);
+  ul {
+    margin: 0;
+    padding: 8px;
+  }
+  li {
+    text-align: center;
+    display: block;
+    list-style-type: none;
+    font-size:1.5em;
+    color: #FFF;
+    &:last-child {
+      margin-bottom:0;
     }
-    li {
-      text-align: center;
-      display: block;
-      list-style-type: none;
-      font-size:1.5em;
-      color: #FFF;
-      &:last-child {
-        margin-bottom:0;
+    a {
+      @include transition(all 300ms ease-in-out);
+      color:lighten($quaternarycolor, 8);
+      text-decoration: none;
+      &:hover{
+        color:lighten($quaternarycolor, 20);
       }
-      a {
-        @include transition(all 300ms ease-in-out);
-        color:lighten($quaternarycolor, 8);
-        text-decoration: none;
-        &:hover{
-          color:lighten($quaternarycolor, 20);
-        }
-      }
+    }
   }
   .archives {
     font-size:1.4em;
